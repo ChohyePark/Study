@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> 
+
+<style>
+
+*{
+    box-sizing: border-box;
+}
+
+div {
+    border: 1px solid black;
+}
+
+.container{
+    width: 800px;
+    height: 600px;
+    margin: auto;
+}
+
+.header{
+    height: 20%;
+}
+
+.header>div{
+    float: left;
+    height: 100%;
+}
+
+.header>.logo{
+    width: 20%;
+    text-align: left;
+    line-height: 300px;
+    background-color: white;
+    border: none;
+}
+
+
+.header>.logo>img {
+    width: 80%;
+    height: 80%;
+
+}
+
+
+.header>.title{
+    width: 60%;
+    text-align: center;
+    line-height: 200px;
+    background-color: white;
+    border: none;
+
+}
+
+.header>.title>img{
+    width: 60%;
+    height: 80%;
+    
+}
+
+.header>.empty {
+    width: 20%;
+    border: none;
+}
+
+
+
+.navi{
+    height: 5%;
+}
+
+.navi>ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.navi>ul>li{
+    text-align: center;
+    float: left;
+    height: 100%;
+    width: 25%;
+    font-size: 11px;
+    line-height: 28px;
+    color: white;
+    background-color: black;
+}
+
+.navi>ul>li:hover {
+    cursor: pointer;
+    color:black;
+    background-color: white;
+    font-style: italic;
+    transition-duration: 0.5s;
+}
+
+.body{
+    height: 60%;
+}
+
+.body>div{
+    float: left;
+    height: 100%;
+}
+
+
+.content{
+    width: 70%;
+}
+
+.content>div {
+    float: left;
+    height: 100%;
+    width: 50%;
+    
+}
+
+.content>.contentleft>img{
+    width: 100%;
+    height: 100%;
+}
+
+.content>.contentright>img{
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    width: 30%;
+}
+
+.login{
+    height: 30%;
+    border: none;
+}
+
+.logintitle{
+    height: 35%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+}
+
+
+
+
+.loginbody{
+    height: 65%;
+
+}
+
+.logininput{
+    width: 70%;
+}
+
+.idarea {
+    height: 50%;
+}
+
+.logininput input{
+    width: 100%;
+    height: 100%;
+    font-size: 3px;
+    
+}
+
+
+
+.pwarea {
+    height: 50%;
+}
+
+
+.button{
+    width: 30%;
+    text-align: center;
+    line-height: 55px;
+    background-color: black;
+}
+
+.button>input {
+    background-color: white;
+    color:black;
+    font-style: italic;
+    font-size: 11px;
+    border-radius: 20px;
+}
+
+.button>input:hover{
+    cursor: pointer;
+
+}
+
+
+
+
+.loginbody>div{
+    float: left;
+    height: 100%;
+}
+
+.email{
+    height: 70%;
+}
+
+.mailtitle{
+    height: 20%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.maillist{
+    height: 80%;
+    overflow: scroll;
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    
+}
+
+.maillist>ul>li {
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-size: 12px;
+}
+
+
+.footer{
+    height: 15%;
+    text-align: center;
+    background-color: black;
+    font-size: 2px;
+    color: white;
+    line-height: 105px;
+}
+
+
+
+
+</style>
+
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+            </div>
+            <div class="title"><img src="niketitle.png"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="navi">
+            <ul>
+                <li>Home</li>
+                <li>Store</li>
+                <li>Community</li>
+                <li>About</li>
+            </ul>
+
+        </div>
+        <div class="body">
+            <div class="content">
+                <div class="contentleft"><img src="컨텐츠2.jpg"></div>
+                <div class="contentright"><img src="컨텐츠3.jpg"></div>
+            </div>
+            <div class="info">
+                <div class="login">
+                    <div class="logintitle">
+                        <i class="fa-solid fa-user-large"></i>
+                    </div>
+                    <div class="loginbody">
+                        <div class="logininput">
+                            <div class="idarea">
+                                <input type ="text"  placeholder="ID를 입력해주세요." >
+                            </div>
+                            <div class="pwarea">
+                                <input type="password" placeholder="PW를 입력해주세요.">
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="button" value="Login">
+                        </div>
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="mailtitle">New Letter  <i class="fa-regular fa-paper-plane"></i></div>
+                    <div class="maillist">
+                        <ul>
+                            <li>1번째 소식입니다.</li>
+                            <li>2번째 소식입니다.</li>
+                            <li>3번째 소식입니다.</li>
+                            <li>4번째 소식입니다.</li>
+                            <li>5번째 소식입니다.</li>
+                            <li>6번째 소식입니다.</li>
+                            <li>7번째 소식입니다.</li>
+                            <li>8번째 소식입니다.</li>
+                            <li>9번째 소식입니다.</li>
+                            <li>10번째 소식입니다.</li>
+                            <li>11번째 소식입니다.</li>
+                            <li>12번째 소식입니다.</li>
+                            <li>13번째 소식입니다.</li>
+                            <li>14번째 소식입니다.</li>
+                            <li>15번째 소식입니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            © 2023 Nike, Inc. All Rights Reserved
+        </div>
+    </div>
+
+</body>
+</html>

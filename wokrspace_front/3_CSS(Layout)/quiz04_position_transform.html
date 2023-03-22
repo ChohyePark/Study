@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+
+div{
+    border: 1px solid black;
+}
+ .container{
+    position: relative;
+    margin: auto;
+    width: 900px;
+    height: 500px;
+    overflow: hidden;
+ }   
+
+ .container img{
+    height: 100%;
+    width: 100%;
+ }
+
+.box{
+    position: absolute;
+    height: 40%;
+    width: 40%;
+    transition-duration: 1.5s;
+    border: 10px solid #ec9aa880;
+}
+
+.box:hover{
+    z-index: 4;
+    transform: rotate(45deg) ;
+}
+
+
+#box1{
+    left: 250px;
+    top: 250px;
+}
+
+#box2{
+    left: 300px;
+    top: 100px;
+}
+
+#box3{
+    left: 450px;
+    top:150px;
+}
+
+.box:active{
+    z-index: 4;
+    height: 60%;
+    width: 60%;
+    transform: none;
+
+}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <img src="쿼카01.jpg">
+        </div>
+        <div class="box" id="box2">
+            <img src="쿼카02.jpg">
+        </div>
+        <div class="box" id="box3">
+            <img src="쿼카03.jpg">
+        </div>
+
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* #msg {
+        width: 200px;
+        height: 200px;
+    } */
+</style>
+
+<body>
+
+    <fieldset>
+        <legend>덧셈기</legend>
+        <input type="text" id="box1"> <br>
+        <input type="text" id="box2"> <br>
+        <button id="btn">+</button><br>
+        <div id="msg"> </div>
+    </fieldset>
+
+
+    <script>
+
+        var btn = document.getElementById("btn");
+        var msg = document.getElementById("msg");
+        var box1 = document.getElementById("box1");
+        var box2 = document.getElementById("box2");
+
+
+        btn.onclick = function () { // 등록해놨다가 스크립트가 읽혀진 뒤 나중에 실행됨  
+            msg.innerHTML = "정답은  : " + (parseInt(box1.value) + parseInt(box2.value));
+            box1.value = "";
+            box2.value = "";
+            box1.focus();
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

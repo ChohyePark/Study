@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 반응 선택자 */
+        /* hover : 마우스가 올라갔을 때 */
+        /* active : 클릭했을때 */
+        /* class 이름을 띄어쓰기로 하나이상 가질 수 있다 */
+
+        .c:hover,.d:hover { /* 클래스 이름이 .c 이거나 .d 인 요소 */
+
+            background-color: pink;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        p:active {
+
+            border: 1px solid palevioletred;
+
+        }
+
+        div.c {
+            /* div 태그 중 클래스 이름이 c인 요소 */
+            /* div#abc -> div 태그중에서 id가 abc인 요소, 두개의 선택자를 연결해서 사용 할 수 있다.*/
+            color: tomato;
+        }
+
+        #a1.class { /* ID가 a1 이면서 class 이름이 class인 요소 */
+
+            border-color: beige;
+        }
+
+        p:not(.c){
+            border:1px solid black;
+        }
+
+        p:not(:last-of-type) {
+            background-color: forestgreen;
+        }
+        
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+    <p class="c">Hover Test 1</p>
+    <p class="c">Hover Test 2</p>
+    <p class="c">Hover Test 3</p>
+    <p class="d">Hover Test 4</p>
+    <p class="d">Hover Test 5</p>
+
+    <div class="c">Hover div 1</div>
+    <div class="c">Hover div 2</div>
+    <div class="c">Hover div 3</div>
+    <div class="c">Hover div 4</div>
+    <div class="c">Hover div 5</div>
+
+</body>
+
+</html>

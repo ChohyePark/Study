@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+
+
+ <table>
+    
+ </table>
+<body>
+
+    <script>
+
+        var row = prompt("행을 입력해주세요."); // 3
+        var col = prompt("열을 입력해주세요."); // 3
+        var num = 1;
+
+
+        document.write("<table border=1px>")
+        for (var j = 0; j < row; j++) {
+            document.write("<tr>")
+            for (var i = 0; i < col; i++) {
+                document.write("<td>" + num + "</td>")
+                num++;
+            }
+            document.write("</tr>")
+        }
+
+        document.write("</table>")
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Quiz_05 {
+
+	public static int validNum(String str){
+		Scanner sc = new Scanner(System.in);
+		
+		int a =0;
+		while(true) {
+			System.out.print(str);
+			try {
+				return a = Integer.parseInt(sc.nextLine());
+				
+			}catch(Exception e) {
+				System.out.println("숫자만 입력");
+			}
+		} 
+	} 
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.println(" === 계산기 프로그램 === ");
+			System.out.print("연산자 입력(+,-,*,/,q[종료]) : ");
+			String oper = sc.nextLine();
+
+			if(oper.equals("q")) {
+
+				System.out.println("계산기를 종료합니다.");
+				System.exit(0);
+
+			}else if(oper.equals("+") || oper.equals("-") ||
+					oper.equals("*") || oper.equals("/")) { 
+
+
+				int num1 = validNum("첫 번쨰 수 : ");
+
+						int num2 = validNum("두 번쨰 수 : ");
+
+
+						System.out.println(" === 결 과 === ");
+
+				switch(oper) {
+				case "+":
+					System.out.println(num1 + " + " + num2 + " = " + (num1+num2));
+					break;
+				case "-":
+					System.out.println(num1 + " - " + num2 + " = " + (num1-num2));
+					break;
+				case "*":
+					System.out.println(num1 + " * " + num2 + " = " + (num1*num2));
+					break;
+				case "/":
+					System.out.println(num1 + " / " + num2 + " = " + (num1/(double)num2));
+					break;
+				}
+
+			}else {
+				System.out.println("연산자를 다시 입력해주세요.");
+			}
+		}
+
+
+
+
+
+	}
+}

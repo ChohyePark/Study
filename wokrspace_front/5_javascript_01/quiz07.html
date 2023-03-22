@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+
+    #box{
+        border: 1px solid black;width: 200px; height: 200px;
+        margin: auto;
+        text-align: center;
+        line-height: 200px;
+    }
+
+    .buttonbox{
+        border: 1px solid black; width: 200px; height: 30px;
+        margin: auto;
+        text-align: center;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+
+</style>
+
+<body>
+    <div id="box">무슨 색깔로 변할까요?</div>
+    <div class="buttonbox">
+        <button id="red">RED</button>
+        <button id="green">GREEN</button>
+        <button id="blue">PINK</button>
+    </div>
+
+<script>
+
+    var box = document.getElementById("box");
+    var red = document.getElementById("red");
+    var green = document.getElementById("green");
+    var blue = document.getElementById("blue");
+
+    red.onclick = function(){
+        box.setAttribute("style","background-color:red;");
+        box.innerHTML = "RED";
+    }    
+
+    green.onclick = function () {
+        box.setAttribute("style","background-color:green;");
+        box.innerHTML = "GREEN";
+    }
+
+    blue.onclick = function () {
+        box.setAttribute("style","background-color:pink;");
+        box.innerHTML = "PINK";
+    }
+
+    clear.onclick = function () {
+        box.removeAttribute("style"); // 스타일 지우는 문법 
+    }
+
+
+    </script>
+
+</body>
+</html>

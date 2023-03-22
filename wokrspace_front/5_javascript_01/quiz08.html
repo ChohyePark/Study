@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #box {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #box:hover {
+            cursor: pointer;
+        }
+
+        #btn{
+            position: absolute;
+            top:0px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">Box</div>
+    <button id="btn"> 버튼 </button>
+
+
+
+    <script>
+
+        var box = document.getElementById("box");
+        var btn = document.getElementById("btn");
+
+        box.addEventListener('mouseover', (event) => {
+            box.setAttribute("style", "background-color:pink;");
+            box.innerText = "무거워 저리가!";
+        })
+
+        box.addEventListener('mouseout', (event) => {
+            box.setAttribute("style", "background-color:skyblue;");
+            box.innerText = "너무 멀리 가지는 말고";
+        })
+
+        document.onmousemove = function (e) {
+            btn.style.top = e.y + "px";
+            btn.style.left = e.x + "px";   
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       
+       
+       /* 태그 선택자 < 클래스 선택자 < ID 선택자 < inline style < important */
+        
+      
+
+        #second { /* ID 선택자 : #id이름 */
+
+            color:dodgerblue; /* 글씨 색깔*/
+            border: 1px solid black ;  /* 테두리 설정*/
+            background-color: pink;
+            font-weight: bold;
+        
+        }
+
+        
+
+        .target { /*Class 선택자 : .class 이름*/
+
+            color: red !important;
+
+        }
+
+        div { /* 태그 선택자 : 태그 이름 */
+
+            color: pink;
+            border: 1px solid black;
+            background-color: dodgerblue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Selector : 선택자 -->
+    <!-- 나열된 HTML 요소들 중 어떤 대상을 스타일링 할 지 지정하는 문법 -->
+
+    <!--Paragraph 문단 나누는 기능 -->
+
+
+    <p>Paragraph 1</p>
+    <p >Paragraph 2</p>
+    <p class = "target">Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p class = "target">Paragraph 5</p>
+
+    <div class = "target" id="second">Paragraph 텍스트3</div> <!--제일 많이 쓰이는 요소-->
+
+
+</body>
+</html>

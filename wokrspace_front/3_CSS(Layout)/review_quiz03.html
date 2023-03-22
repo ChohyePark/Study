@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<style>
+
+*{
+    box-sizing: border-box;
+}
+
+div{
+    border: 1px solid black;
+}
+
+.scrollbox{
+    background-color: rgb(255, 255, 167);
+    margin: auto;
+    width: 500px;
+    height: 1800px;
+}
+
+.menu{
+    background-color: #afeeee80;
+    position: fixed;
+    top: 100px;
+    transform: translateX(-130px);
+    /* right: 1000px; */
+    height: 350px;
+    width: 150px; 
+    transition-duration: 2s;
+}
+
+
+.menu:hover{
+
+/* left:0px; */
+background-color: pink;
+transform: translateX(-10px);   
+}
+
+.menu:hover i{
+    visibility: hidden;
+    /* opacity: 0%; */
+}
+
+
+.icon{
+    position: relative;
+    left: 130px;
+    bottom: 130px;
+    border: none;
+}
+
+ul{ 
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+    line-height: 70px;
+}
+
+/* .icon>i:hover{
+    opacity: 0;
+} */
+
+</style>
+
+</head>
+
+<body>
+ 
+    <div class="menu">
+        <ul>
+            <li>Home</li>
+            <li>Order</li>
+            <li>Login</li>
+            <li>Contant</li>
+        </ul>
+        <div class="icon"><i class="fa-solid fa-caret-right"></i></i></div>
+    </div>
+
+    <div class="scrollbox"></div>
+ 
+
+
+</body>
+</html>

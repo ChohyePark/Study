@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+*{
+    box-sizing: border-box;
+}
+
+div{
+    top : -8px;
+    border: 1px solid black;
+}
+
+.container{
+    z-index: 4;
+    position: relative;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    height: 30px;
+}
+
+.containertext{
+   
+    text-align: center;
+    width: 100%;
+    height: 30px;
+
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+ul>li{
+    z-index: 4;
+    color: white;
+    float: left;
+    height: 100%;
+    width: 25%;
+}
+
+
+.list1,.list2,.list3,.list4{
+
+    color: white;
+    float: left;
+    width:25%;
+    height: 120px;
+    transform: translateY(-120px);
+    transition-duration: 2s;
+}
+
+
+.list1:hover{
+    cursor: pointer;
+    transform: translateY(0px);
+}
+
+.list2:hover{
+    cursor: pointer;
+    transform: translateY(0px);
+}
+
+.list3:hover{
+    cursor: pointer;
+    transform: translateY(0px);
+}
+
+.list4:hover{
+    cursor: pointer;
+    transform: translateY(0px);
+}
+
+
+</style>
+
+</head>
+<body>
+    
+<div class="container"> 
+        <div class="containertext">
+            <ul>
+                <li >Home</li>
+                <li>Contact</li>
+                <li >About</li>
+                <li >Menu</li>
+            </ul>
+        </div>
+        <div class="list1"></div>
+        <div class="list2"></div>
+        <div class="list3"></div>
+        <div class="list4"></div>
+  </div> 
+
+
+
+
+</body>
+</html>

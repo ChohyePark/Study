@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+        /* div {
+            border: 1px solid #00329F;
+        } */
+
+        body {
+            min-width: 1000px;
+            background-color: #fafbfd;
+        }
+
+        .container{
+            height: 2000px;
+            background-image: url("body2.png");
+            background-size: cover;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 15%;
+        }
+
+        .header>div {
+            float: left;
+            height: 100%;
+        }
+
+        .header>.titleleft {
+            width: 26%;
+        }
+
+
+        .header>.titleleft>.list {
+            z-index: 5;
+            position: absolute;
+            width: 29%;
+            top: 45%;
+            text-align: center;
+        }
+
+        .titleleft>.list>ul {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            list-style-type: none;
+        }
+
+        .titleleft>.list>ul>li {
+            float: left;
+            height: 100%;
+            width: 30%;
+            line-height: 30px;
+            font-size: 12px;
+            color: #00329F;
+            transition-duration: 1s;
+        }
+
+        .list>ul>li:hover {
+            background-color: #00329F90;
+            color: #fafbfd;
+            cursor: pointer;
+            font-weight: bold;
+            border-bottom: 0.5px solid #00329F;
+        }
+
+
+
+
+
+
+        .header>.title {
+            width: 49%;
+        }
+
+        .title>div {
+            float: left;
+            height: 100%;
+        }
+
+        .title>.logo {
+            width: 40%;
+        }
+
+        .logo>img {
+            width: 80%;
+            height: 80%;
+            position: relative;
+            top: 10%;
+            left: 10%;
+        }
+
+        .title>.search {
+            width: 60%;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .search>input {
+            border: 1px solid #00329f70;
+            width: 60%;
+            height: 10%;
+            border-radius: 100px;
+            text-align: center;
+            padding-left: 10px;
+        }
+
+        .search>i {
+            font-size: 12px;
+            color: #00329F;
+        }
+
+        i:hover {
+            cursor: pointer;
+        }
+
+        .header>.titleright {
+            width: 25%;
+            text-align: center;
+        }
+
+
+
+
+        .titleright>.giflogo {
+            position: relative;
+            top: 10%;
+            left: 20%;
+            width: 60%;
+            height: 80%;
+        }
+
+        .giflogo>img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .button {
+            z-index: 100;
+            top: 450px;
+            position: fixed;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            color: #00329F;
+            font-size: 11px;
+
+        }
+
+        .button>img {
+            width: 150px;
+            height: 150px;
+            transition-duration: 3s;
+        }
+
+        .button>img:hover {
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+
+        .body {
+            width: 100%;
+            height: 75%;
+        }
+
+        .body>div {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+        }
+
+        .bodytop {
+            text-align: center;
+            line-height: 500px;
+            font-size: 32px;
+            color: #00329F;
+        }
+
+
+        .albumtext1 {
+            position: relative;
+            width: 300px;
+            height: 100px;
+            left: 210px;
+            top: 830px;
+        }
+
+
+        .body>.bodytop>.album {
+            top: 100px;
+            position: relative;
+            left: 26%;
+            width: 900px;
+            height: 500px;
+        }
+
+        .album>div {
+            width: 100%;
+        }
+
+        .album>.albumtitle {
+            height: 30%;
+            line-height: 200px;
+            font-weight: bold;
+        }
+
+        .album>.albumlist {
+            height: 70%;
+        }
+
+        .record1 {
+            font-size: 13px;
+        }
+
+        .record1>img {
+            height: 200px;
+            width: 200px;
+            transition-duration: 1s;
+        }
+
+        .record1>img:hover {
+            cursor: pointer;
+            height: 240px;
+            width: 240px;
+        }
+
+
+
+        .record2>img {
+            height: 200px;
+            width: 200px;
+            transition-duration: 2s;
+        }
+
+        .record2>img:hover {
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+
+        .record3>img {
+            height: 200px;
+            width: 200px;
+            transition-duration: 1s;
+        }
+
+        .record3>img:hover {
+            cursor: pointer;
+            height: 240px;
+            width: 240px;
+        }
+
+
+        .albumlist>div {
+            float: left;
+            height: 100%;
+            width: 32%;
+            margin-left: 1%;
+        }
+
+
+
+
+        .bodybottom {
+            position: relative;
+            width: 100%;
+            height: 50%;
+        }
+
+        .body>.bodybottom>.msg {
+            position: absolute;
+            font-size: 40px;
+            top: -80px;
+            left: 45%;
+            color: #fafbfd;
+        }
+
+
+        .artisttitle {
+            line-height: 350px;
+            color: #fafbfd;
+            font-size: 26px;
+        }
+
+        .artist1 {
+            position: absolute;
+            top: 53px;
+            left: 25%;
+            height: 250px;
+            width: 400px;
+        }
+
+        .artist1>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .artist1cover {
+            position: absolute;
+            top: 53px;
+            left: 25%;
+            height: 250px;
+            width: 400px;
+            background-color: transparent;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 250px;
+            color: transparent;
+        }
+
+        .artist1cover:hover {
+            cursor: pointer;
+            background-color: #00000070;
+            color: white;
+        }
+
+        .artist2 {
+            position: absolute;
+            top: 53px;
+            right: 25%;
+            height: 250px;
+            width: 400px;
+
+        }
+
+        .artist2>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .artist2cover {
+            position: absolute;
+            top: 53px;
+            right: 25%;
+            height: 250px;
+            width: 400px;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 250px;
+            background-color: transparent;
+            color: transparent;
+        }
+
+        .artist2cover:hover {
+            cursor: pointer;
+            background-color: #00000070;
+            color: white;
+        }
+
+
+        .artist3 {
+            position: absolute;
+            top: 410px;
+            left: 25%;
+            height: 250px;
+            width: 400px;
+        }
+
+        .artist3>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .artist3cover {
+            position: absolute;
+            top: 410px;
+            left: 25%;
+            height: 250px;
+            width: 400px;
+            color: transparent;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 250px;
+            background-color: transparent;
+        }
+
+        .artist3cover:hover {
+            cursor: pointer;
+            background-color: #00000070;
+            color: white;
+        }
+
+        .artist4 {
+            position: absolute;
+            top: 410px;
+            right: 25%;
+            height: 250px;
+            width: 400px;
+
+        }
+
+        .artist4>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .artist4cover {
+            position: absolute;
+            top: 410px;
+            right: 25%;
+            height: 250px;
+            width: 400px;
+            background-color: transparent;
+            color: transparent;
+            font-size: 18px;
+            line-height: 250px;
+            font-style: italic;
+        }
+
+        .artist4cover:hover {
+            cursor: pointer;
+            color: black;
+            background-color: #fafbfd80;
+        }
+
+
+        .footer {
+            width: 100%;
+            height: 20%;
+            position: absolute;
+        }
+
+
+        .footer>div {
+            float: left;
+            height: 100%;
+        }
+
+        .footer>.fleft {
+            width: 25%;
+        }
+
+        .footer>.fguide {
+            width: 50%;
+            text-align: center;
+            color: #00329F;
+        }
+
+        .fguide>.text {
+            position: relative;
+            top: 60%;
+            left: 10%;
+            height: 40%;
+            width: 80%;
+            text-align: center;
+            font-size: 12px;
+            font-style: italic;
+            border-top: 1px solid #00329F;
+        }
+
+        .footer>.fright {
+            width: 25%;
+        }
+
+
+        .iconbox {
+            position: relative;
+            top: 80%;
+            left: 150px;
+            width: 40%;
+            height: 20%;
+            text-align: center;
+            color: #00329F;
+            font-size: 20px;
+        }
+
+
+        /* .bodytext{
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    background-color: aqua;
+    top: 150px;
+    left: 400px;
+    color: #fafbfd;
+} */
+        .bodytext {}
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+    <div class="container">
+        <div class="button">
+            Create Playlist
+            <img src="button.png">
+        </div>
+
+        <div class="header">
+            <div class="titleleft">
+                <div class="list">
+                    <ul>
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="listcover1">
+                </div>
+            </div>
+
+            <div class="title">
+                <div class="logo">
+                    <img src="mainlogo.png">
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="search for artist">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="titleright">
+                <div class="giflogo">
+                    <img src="gif로고.gif">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="body">
+            <div class="bodytop">
+                <div class="album">
+                    <div class="albumtitle">Editor's Picks</div>
+                    <div class="albumlist">
+                        <div class="record1">
+                            <img src="record1.png">
+                        </div>
+                        <div class="record2">
+                            <img src="record2.png">
+                        </div>
+                        <div class="record3">
+                            <img src="record3.png">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="bodybottom">
+
+                <div class="artist1">
+                    <img src="artist1.gif">
+                </div>
+
+
+                <div class="artist1cover">Listen Now</div>
+                <div class="artist2">
+                    <img src="artist2.gif">
+                </div>
+                <div class="artist2cover">Listen Now</div>
+                <div class="artist3">
+                    <img src="artist3.gif">
+                </div>
+                <div class="artist3cover">Listen Now</div>
+                <div class="artist4"><img src="artist4.gif"></div>
+                <div class="artist4cover">Listen Now</div>
+
+                <div class="msg">New Artist</div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="fleft"></div>
+            <div class="fguide">
+                <div class="text"><br>
+                    <i class="fa-solid fa-location-dot"></i>
+                    대한민국<br>Copyrght © 2023 Sound Planet, Inc. All Rights Reserved <br>
+                    개인정보 처리 방침 / Site Map
+                </div>
+            </div>
+            <div class="fright">
+                <div class="iconbox">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

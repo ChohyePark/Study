@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            border: 1px solid black;
+        }
+
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: auto;
+        }
+
+        .header {
+            height: 20%;
+        }
+
+        .header>div {
+            float: left;
+            height: 100%;
+        }
+
+        .Logo {
+            width: 20%;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .Title {
+            width: 60%;
+        }
+
+        .header>.Title>img{
+            width: 100%;
+            height: 100%;
+        
+        }
+
+        .header>.Logo>img{
+            width: 50%;
+            height: 50%;
+        }
+
+        .Reserved {
+            width: 20%;
+            background-color: rgb(228, 30, 49) ;
+
+        }
+
+        hr{
+            border-top: 0.5px solid white;
+        }
+
+        .navi {
+            height: 5%;
+        }
+
+        ul{
+            margin: 0px;
+            padding: 0px;    
+            overflow: hidden;
+            text-align: center;
+            list-style-type: none;
+        }
+
+        .navi>ul>li{
+            float: left;
+            width: 25%;
+            height: 30px;
+            text-align: center; 
+            background-color: rgb(228, 30, 49) ;
+            color: white;
+            line-height: 27px;
+            font-size: 13px;
+        }
+
+        .navi>ul>li:hover{
+            background-color: white;
+            color:rgb(228, 30, 49) ;
+            transition-duration:0.8s;
+            cursor: pointer;
+            font-style:italic;
+        }
+
+        .body {
+            height: 60%;
+        }
+
+        .body>div {
+            float: left;
+            height: 100%;
+        }
+
+        .Contents {
+            width: 70%;
+        }
+
+        .info {
+            width: 30%;
+        }
+
+        .Loginbox {
+            height: 30%;
+            font-size: 12px;
+        }
+
+        .Loginbox>.logintitle{
+            height: 30%;
+            background-color: rgb(228, 30, 49);
+        }
+
+        .Loginbox>.loginbody {
+            height: 70%;
+        }
+
+        .loginbody>div{
+            float: left;
+            height: 100%;
+        }
+
+        .loginarea{
+            width: 70%;
+        }
+
+        .idarea{
+            height: 50%;
+        }
+
+        #id{
+            height: 100%;
+            width: 100%;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        #pw{
+            height: 100%;
+            width: 100%;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .pwarea{
+            height: 50%;
+        }
+
+
+        .buttonarea{
+          
+            background-color:rgb(228, 30, 49) ;
+            width: 30%;
+        }
+
+        #button{
+            position: relative;
+            top:25px;
+            left: 13px;
+            background-color:rgb(228, 30, 49) ;
+            color: white;
+            font-size: 12px;
+        } 
+
+        /* #logoimg:hover{
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+
+        } */
+        
+        .email {
+            height: 70%;
+            position: relative;
+            text-align: center;
+           
+        }
+
+        .mailtitle{
+            
+            height: 15%;
+            font-style: italic;
+            line-height: 35px;
+            background-color:rgb(228, 30, 49) ;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .maillist{
+            height:85%;
+            overflow-y: scroll;
+            font-size: 11px;
+        }
+ 
+        .maillist>ul>li{
+            border-bottom: 1px solid black;
+        }
+
+        .footer {
+            height: 15%;
+            text-align: center;
+            font-size: 9px;
+            line-height: 150px;
+        }
+
+        .email>.mailtitle>i:hover{
+        -webkit-transform: rotate(-50deg);
+        -moz-transform: rotate(-50deg);
+        cursor: pointer;
+        transition-duration: 0.3s;
+            }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="Logo"><img src="cola_logo.png"></div>
+            <div class="Title">
+                <img src="Coca-Cola_logo.svg.png">
+            </div>
+            <div class="Reserved">
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+        <div class="navi">
+            <ul>
+                <li>Home</li>
+                <li>Store</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </div>
+        <div class="body">
+            <div class="Contents"></div>
+            <div class="info">
+                <div class="Loginbox">
+                    <div class="logintitle">        
+                    </div>
+                    <div class="loginbody">
+                        <div class="loginarea">
+                            <div class="idarea" ><input type="text" id="id" placeholder="ID를 입력하세요."></div>
+                            <div class="pwarea" ><input type="password" id="pw" placeholder="pw를 입력하세요."></div>
+                        </div>
+                        <div class="buttonarea">
+                           <input type="button" id="button" value="Login">
+                            <!-- <input type="button" id="button" value="Login"> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="mailtitle"><i class="fa-regular fa-envelope"></i> Mail box</div>
+                    <div class="maillist">
+                        <ul>
+                           <li>1번째 메일입니다</li>
+                           <li>2번째 메일입니다</li>
+                           <li>3번째 메일입니다</li>
+                           <li>4번째 메일입니다</li>
+                           <li>5번째 메일입니다</li>
+                           <li>6번째 메일입니다</li>
+                           <li>7번째 메일입니다</li>
+                           <li>8번째 메일입니다</li>
+                           <li>9번째 메일입니다</li>
+                           <li>10번째 메일입니다</li>
+                           <li>11번째 메일입니다</li>
+                           <li>12번째 메일입니다</li>
+                           <li>13번째 메일입니다</li>
+                           <li>14번째 메일입니다</li>
+                           <li>15번째 메일입니다</li>
+                        </ul>
+                    </div> 
+      
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright by CHP since 2023. 03. 03
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

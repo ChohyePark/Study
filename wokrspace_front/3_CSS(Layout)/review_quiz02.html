@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+*{
+    box-sizing: border-box;
+}
+
+div{
+    border: 1px solid black;
+}
+
+.container{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.container>div{
+    background-color: #ffc0cb70;
+    float: left;
+    height: 100%;
+    width: 25%;
+    transition-duration: 0.5s;
+}
+
+.container>div:hover {
+    background-color: pink;
+    transform: scale(2);
+}
+
+.textbox{
+    margin: auto;
+    width: 400px;
+    height: 1800px;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Board</div>
+        <div>Contact</div>
+    </div>
+
+    <div class="textbox">
+    </div>
+
+
+</body>
+</html>

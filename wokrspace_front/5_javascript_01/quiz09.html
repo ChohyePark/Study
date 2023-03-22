@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        div {
+            width: 300px;
+            height: 30px;
+        }
+
+        
+    </style>
+
+</head>
+
+
+
+<body>
+    <input type id="pw"><br>
+    <input type id="pw2">
+    <div id="msg"></div>
+    <script>
+
+        var pw = document.getElementById("pw");
+        var pw2 = document.getElementById("pw2");
+        var msg = document.getElementById("msg");
+
+        pw2.onkeyup = function (e) {
+            console.log(e.keyCode);
+
+            if (pw.value != pw2.value) {
+                msg.innerText = "패스워드가 일치하지 않습니다.";
+            } else if (pw.value == pw2.value) {
+                msg.innerText = "패스워드가 일치합니다.";
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
